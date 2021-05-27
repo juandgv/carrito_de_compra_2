@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica carrito de compras</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body class="fondo">
+    <div class="container">
+        <h1>Catalogo de Tienda Virtual- Realizado por Juan David Gil Valencia</h1>
+        <h1>Lleva tu Giclée!</h1>
+ 
+        <hr>
+        <table class="table text-white">
+          <thead>
+            <tr>
+              <th scope="col .bg-secondary .bg-gradient">#</th>
+              <th scope="col">Item</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Acción</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+            <tr id="footer">
+              <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+            </tr>
+          </tfoot>
+        </table>
+
+    
+        <div class="row" id="cards"></div>
+    </div>
+
+    <template id="template-footer">
+      <th scope="row" colspan="2">Total productos</th>
+      <td>10</td>
+      <td>
+          <button class="btn btn-danger ml-auto" id="vaciar-carrito">
+              Vaciar todo
+          </button>
+          <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+          data-target="#comprarModal">Comprar</button>
+     
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>
+  </template>
+  
+  <template id="template-carrito">
+    <tr>
+      <th scope="row">id</th>
+      <td>Café</td>
+      <td>1</td>
+      <td>
+          <button class="btn btn-info btn-sm">
+              +
+          </button>
+          <button class="btn btn-danger btn-sm">
+              -
+          </button>
+      </td>
+      <td>$ <span>500</span></td>
+    </tr>
+  </template>
+      
+
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+          <div class="card">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5>Titulo</h5>
+              <p>precio</p>
+              <button class="btn btn-dark">Añadir al carrito</button>
+            </div>
+          </div>
+        </div>
+      </template>
+
+<footer>
+  <h3>Arte realizado por DEATH & MILK © 2021, DEATH & MILK</h3>
+  <h3>Link a la tienda: https://deathandmilk.com</h3>
+</footer>
+<!-- START MODAL COMPRA -->
+
+<div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="comprarModalLabel">Gracias por su compra</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <h4>Pronto recibirá su pedido</h4>
+           
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- END MODAL COMPRA -->
+
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+crossorigin="anonymous"></script>
+
+ 
+    <script src="app.js"></script>
+</body>
+</html>
